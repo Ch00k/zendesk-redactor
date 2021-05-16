@@ -122,7 +122,7 @@ def attachments(ctx):
                     error="Redaction failed",
                 )
     if not attachments_found:
-        print("Ticket contains not attachments")
+        print("Ticket contains no attachments")
 
 
 def get_comments(base_url, auth):
