@@ -44,7 +44,7 @@ These can be provided in two ways.
 1. As command-line options:
 
 ```
-$ redactor --organization obscura --email agent@obscura.com --token BigSecret42
+$ zredactor --organization obscura --email agent@obscura.com --token BigSecret42
 ```
 
 2. As environment variables:
@@ -60,26 +60,26 @@ export ZREDACTOR_TOKEN=BigSecret42
 The following command will redact all occurrences of the text snippets `foo`, `bar`, `baz` in the ticket with ID 1742:
 
 ```
-$ redactor --organization obscura --email agent@obscura.com --token BigSecret42 --ticket-id 1742 snippets foo bar baz
+$ zredactor --organization obscura --email agent@obscura.com --token BigSecret42 --ticket-id 1742 snippets foo bar baz
 ```
 
 Alternatively, if you use environment variables for authentication:
 
 ```
-$ redactor --ticket-id 1742 snippets foo bar baz
+$ zredactor --ticket-id 1742 snippets foo bar baz
 ```
 
 The following command will redact all occurrences of the text snippets provided in a file `/tmp/to_redact.txt` in the
 ticket with ID 1742:
 
 ```
-$ redactor --organization obscura --email agent@obscura.com --token BigSecret42 --ticket-id 1742 snippets -f /tmp/to_redact.txt
+$ zredactor --organization obscura --email agent@obscura.com --token BigSecret42 --ticket-id 1742 snippets -f /tmp/to_redact.txt
 ```
 
 Alternatively, with authentication environment variables set:
 
 ```
-$ redactor --ticket-id 1742 snippets -f /tmp/to_redact.txt
+$ zredactor --ticket-id 1742 snippets -f /tmp/to_redact.txt
 ```
 
 The file must contain one snippet per line.
@@ -89,13 +89,13 @@ The file must contain one snippet per line.
 The following command will redact all attachments in ticket with ID 1742:
 
 ```
-$ redactor --organization obscura --email agent@obscura.com --token BigSecret42 --ticket-id 1742 attachments
+$ zredactor --organization obscura --email agent@obscura.com --token BigSecret42 --ticket-id 1742 attachments
 ```
 
 Alternatively, with authentication environment variables set:
 
 ```
-$ redactor --ticket-id 1742 attachments
+$ zredactor --ticket-id 1742 attachments
 ```
 
 Note that currently it is not possible to redact attachments selectively.
