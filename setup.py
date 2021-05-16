@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name="zendesk-redactor",
-    version="0.0.2",
+    version="0.0.3",
     description="A command-line interface for Zendesk Ticket Redaction app",
     long_description=open("README.md").read(),
     author="Andrii Yurchuk",
